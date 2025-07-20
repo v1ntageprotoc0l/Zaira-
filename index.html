@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just for Zaira</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6e6, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .heart {
+      font-size: 4rem;
+      color: #e63946;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .note {
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn ease 3s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    #weddingModal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff8f0;
+      border: 2px solid #d8b08c;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-family: 'Georgia', serif;
+      text-align: center;
+      z-index: 1000;
+      animation: fadeIn ease 3s forwards;
+    }
+
+    #modalOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Blossoms background -->
+  <svg style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10%" cy="20%" r="2" fill="pink">
+      <animate attributeName="cy" values="20%;80%;20%" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="70%" cy="10%" r="3" fill="#ffb6c1">
+      <animate attributeName="cy" values="10%;90%;10%" dur="25s" repeatCount="indefinite" />
+    </circle>
+  </svg>
+
+  <h1>Hi Zaira 🌸</h1>
+  <p>This page was crafted with love and tech wizardry by Alejandra. Just a little reminder: you're always in her thoughts.</p>
+  <div class="heart">❤️</div>
+  <p class="note">If this page had a scent, it'd be rose water and espresso.</p>
+
+  <!-- Spotify Embed -->
+  <div style="margin-top: 2rem;" class="fade-in">
+    <h2>Our Song</h2>
+    <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/track/56JxJKeb9BwrjD0QeiODC7?si=aa8e7b3f9cce49fd" 
+      width="100%" height="152" 
+      frameBorder="0" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy"></iframe>
+    <p class="note">Danced to this on our wedding day. Still dancing—just in sync hearts now.</p>
+  </div>
+
+  <!-- Wedding Date Modal -->
+  <div id="modalOverlay"></div>
+  <div id="weddingModal">
+    <h2>📸 Kodak Moment</h2>
+    <p>May 17, 2025 — The day the universe paused for our rhythm.</p>
+    <p class="note">This memory is sealed with every beat of our song.</p>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('weddingModal').style.display = 'block';
+        document.getElementById('modalOverlay').style.display = 'block';
+      }, 5000);
+    };
+  </script>
+
+</body>
+</html>
