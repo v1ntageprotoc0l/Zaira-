@@ -91,6 +91,17 @@
       margin-top: 1rem;
       color: #6b4c3b;
     }
+
+    .close-button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #d8b08c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -129,6 +140,7 @@
     <h2>📸 El mejor día de mi vida</h2>
     <p>17 de mayo de 2025 — El día en que el universo se detuvo para nuestro ritmo.</p>
     <p class="note">Este recuerdo está sellado con cada latido de nuestra canción.</p>
+    <button class="close-button" onclick="closeModal()">Cerrar</button>
   </div>
 
   <script>
@@ -138,6 +150,11 @@
         document.getElementById('modalOverlay').style.display = 'block';
       }, 5000);
     };
+
+    function closeModal() {
+      document.getElementById('weddingModal').style.display = 'none';
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
   </script>
 
 </body>
