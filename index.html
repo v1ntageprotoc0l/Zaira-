@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Para Zaira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <style>
     body {
       background: linear-gradient(to right, #ffe6e6, #fff0f5);
@@ -76,6 +77,20 @@
       background-color: rgba(0,0,0,0.4);
       z-index: 999;
     }
+
+    .handwritten {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      color: #6b4c3b;
+      margin-top: 2rem;
+    }
+
+    .infinity {
+      font-size: 2rem;
+      animation: pulse 1.5s infinite;
+      margin-top: 1rem;
+      color: #6b4c3b;
+    }
   </style>
 </head>
 <body>
@@ -91,18 +106,39 @@
   </svg>
 
   <h1>Hola Zaira 🌸</h1>
-  <p>Esta página fue creada con cariño y magia tecnológica por Alejandra. Solo un recordatorio: siempre estás en sus pensamientos.</p>
+  <p>Esta página fue creada con cariño y magia tecnológica por Alejandra.</p>
   <div class="heart">❤️</div>
-  <p class="note">Si esta página tuviera aroma, sería agua de rosas con espresso.</p>
+  <p class="handwritten">Solo un recordatorio: siempre estás en mis pensamientos.</p>
+  <p class="handwritten">♾️ 17 de mayo de 2025</p>
 
   <!-- Canción de Spotify -->
- <div style="margin-top: 2rem;" class="fade-in">
-  <h2>Nuestra canción</h2>
-  <iframe style="border-radius:12px" 
-    src="https://open.spotify.com/embed/track/56JxJKeb9BwrjD0QeiODC7?utm_source=generator" 
-    width="100%" height="152" 
-    frameBorder="0" 
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-    loading="lazy"></iframe>
-  <p class="note">Bailamos esta en nuestra boda. Ahora solo seguimos bailando—con corazones sincronizados.</p>
-</div>
+  <div style="margin-top: 2rem;" class="fade-in">
+    <h2>Nuestra canción</h2>
+    <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/56JxJKeb9BwrjD0QeiODC7?utm_source=generator" 
+      width="100%" height="152" 
+      frameBorder="0" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy"></iframe>
+    <p class="note">Bailamos esta en nuestra boda. Ahora solo seguimos bailando—con corazones sincronizados.</p>
+  </div>
+
+  <!-- Modal del día especial -->
+  <div id="modalOverlay"></div>
+  <div id="weddingModal">
+    <h2>📸 El mejor día de mi vida</h2>
+    <p>17 de mayo de 2025 — El día en que el universo se detuvo para nuestro ritmo.</p>
+    <p class="note">Este recuerdo está sellado con cada latido de nuestra canción.</p>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('weddingModal').style.display = 'block';
+        document.getElementById('modalOverlay').style.display = 'block';
+      }, 5000);
+    };
+  </script>
+
+</body>
+</html>
